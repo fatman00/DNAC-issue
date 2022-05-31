@@ -1,0 +1,1 @@
+chrome.exe --user-data-dir=c:\temp\chrome --disable-web-security --disable-site-isolation-trials

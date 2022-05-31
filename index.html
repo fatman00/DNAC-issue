@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>DNAC RE-GUI Template</title>
+    <!-- <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css"> -->
+    <link rel="stylesheet" href="css/menu-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <!-- Tabulator CDN -->
+    <link href="https://unpkg.com/tabulator-tables@4.9.3/dist/css/tabulator.min.css" rel="stylesheet">
+    <script type="text/javascript" src="https://unpkg.com/tabulator-tables@4.9.3/dist/js/tabulator.min.js"></script>
+    <!--- Leaflet includes -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+   crossorigin=""></script>
+   <script src="https://d3js.org/d3.v7.min.js"></script>
+    <!-- Includes of a seperate .js file for each "page" -->
+    <script type="text/javascript" src="js/menu.js"></script>
+    <script type="text/javascript" src="js/dashboard.js"></script>
+    <script type="text/javascript" src="js/logon.js"></script>
+    <script type="text/javascript" src="js/credentials.js"></script>
+    <script type="text/javascript" src="js/events.js"></script> 
+    <script type="text/javascript" src="js/clients.js"></script> 
+    <script type="text/javascript" src="js/clientsummary.js"></script> 
+    <style>
+        .content {
+            margin: 3rem;
+        }
+
+        .lead {
+            font-size: 1.5rem;
+            font-weight: 300;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <!--wrapper start-->
+    <div class="wrapper">
+
+        <!--sidebar start-->
+        <div class="sidebar">
+            <div class="sidebar-menu">
+                <center class="profile">
+                    <p>DNAC XXX GUI</p>
+                </center>
+                <li class="item">
+                    <a href="#dashboard" class="menu-btn clickable"><i
+                            class="fas fa-desktop"></i><span>Dashboard</span></a>
+                </li>
+                <li class="item">
+                    <a href="#logon" class="menu-btn clickable"><i class="fas fa-user"></i><span>Logon</span></a>
+                </li>
+                <li class="item" id="tools">
+                    <a href="#tools" class="menu-btn">
+                        <i class="fas fa-screwdriver-wrench"></i><span>Tools<i
+                                class="fas fa-chevron-down drop-down"></i></span>
+                    </a>
+                    <div class="sub-menu">
+                        <a href="#credentials" class="clickable"><i
+                                class="fas fa-user-circle"></i><span>Credentials</span></a>
+                        <a href="#discover" class="clickable"><i
+                                class="fas fa-magnifying-glass-plus"></i><span>Discover</span></a>
+                        <a href="#"><i class="fas fa-barcode"></i><span>Bulk Discover</span></a>
+                    </div>
+                </li>
+                <li class="item" id="assurance">
+                    <a href="#assurance" class="menu-btn">
+                        <i class="fas fa-chart-line"></i><span>Assurance<i
+                                class="fas fa-chevron-down drop-down"></i></span>
+                    </a>
+                    <div class="sub-menu">
+                        <a href="#events" class="clickable"><i class="fas fa-chart-gantt"></i><span>Events</span></a>
+                        <a href="#clientssummary" class="clickable"><i class="fas fa-globe"></i><span>Client Summary</span></a>
+                        <a href="#clients" class="clickable"><i class="fas fa-desktop"></i><span>Clients</span></a>
+                    </div>
+                </li>
+                <li class="item" id="setting">
+                    <a href="#setting" class="menu-btn">
+                        <i class="fas fa-cog"></i><span>Setting <i class="fas fa-chevron-down drop-down"></i></span>
+                    </a>
+                    <div class="sub-menu">
+                        <a href="#"><i class="fas fa-lock"></i><span>Password</span></a>
+                        <a href="#"><i class="fas fa-language"></i><span>Language</span></a>
+                    </div>
+                </li>
+                <li class="item">
+                    <a href="" class="menu-btn"><i class="fas fa-info-circle"></i><span>About</span></a>
+                </li>
+            </div>
+        </div>
+        <!--sidebar end-->
+        <!--header menu start-->
+        <div class="header">
+            <div class="header-menu">
+                <div class="title"><span class="title-hide">RE<span class="sec-span">GUI</span></span></div>
+                <div class="sidebar-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul>
+                    <li><a href=""><i class="fas fa-power-off"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <!--header menu end-->
+        <!--main container start-->
+        <div class="main-container">
+            <!-- Dashboard page -->
+            <div class="content" id="dashboard">
+                <h1>Sidebar Navigation Template Example</h1>
+                <div id="carbon-block" style="margin:30px auto"></div>
+                <p class="lead">An easy, open-source, multi-level sidebar toggle menu template that is well-suited for
+                    dashboards, admin panels, and documentation websites.</p>
+                <form>
+                    <button type="submit" class="btn btn-primary" id="btnDashboardTest">Test Call</button>
+                    <button type="submit" class="btn btn-primary" id="btnDashboardd3Test">D3 Call</button>
+                    <!--<select style="width: 80%;" id="selSites" rows="10"></select>-->
+                </form>
+                <p class="d3" id="p1">first paragraph</p>
+                <p class="d3" id="p2">second paragraph</p>
+            </div>
+            <!-- Login page -->
+            <div class="content" id="logon" style="display: none">
+                <h1>Logon to DNA Center</h1>
+                <div id="carbon-block" style="margin:30px auto"></div>
+                <p class="lead">Use the belog information to login to the DNA Center of your choice.</p>
+                <form>
+                    <div class="mb-3">
+                        <label for="loginDnacSelector" class="form-label">Predefined DNACs</label>
+                        <select style="text-align: left; width: 80%;" name="loginDnacSelector" id="loginDnacSelector" class="btn btn-primary">
+                            <option value="https://sandboxdnac2.cisco.com;dnacdev;D3v93T@wK!">https://sandboxdnac2.cisco.com - V1.3.3.x</option>
+                            <option value="https://dcloud-dna-sda-rtp.cisco.com/;Demo;demo1234!">https://dcloud-dna-sda-rtp.cisco.com/ - V2.1.2.4</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="dnacurl" class="form-label">DNA Center URL</label>
+                        <input type="text" class="form-control" id="dnacurl" value="https://sandboxdnac2.cisco.com"
+                            placeholder="https://dnac-ip.com">
+                    </div>
+                    <div class="mb-3">
+                        <label for="dnacusername" class="form-label">Username</label>
+                        <input type="text" class="form-control" id="dnacusername" value="dnacdev"
+                            placeholder="username">
+                    </div>
+                    <div class="mb-3">
+                        <label for="dnacpassword" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="dnacpassword" value="D3v93T@wK!"
+                            placeholder="Password">
+                    </div>
+                    <button type="submit" class="btn btn-primary" id="dnacsubmit">Submit</button>
+                    <button type="submit" class="btn btn-info" id="dnacload" alt="Load saved config"><i class="fas fa-upload"></i></button>
+                    <button type="submit" class="btn btn-info" id="dnacsave" alt="Save config"><i class="fas fa-download"></i></button>
+                    <button type="submit" class="btn btn-info" id="dnacclear" alt="Clear local config"><i class="fas fa-trash-can"></i></button>
+                    <hr />
+                    <div class="mb-3">
+                        <label for="dnacauthtoken" class="form-label">Authentication token</label>
+                        <input type="text" class="form-control" id="dnacauthtoken" value="Unauthenticated"
+                            placeholder="Unauthenticated">
+                    </div>
+                </form>
+            </div>
+            
+            <!-- events page page -->
+            <div class="content" id="events" style="display: none">
+                <h1>Events for DNAC</h1>
+                <div id="carbon-block" style="margin:30px auto">
+                    <form>
+                        <button type="submit" class="btn btn-primary" id="btnEventGet">Get all events</button>
+                        <!-- <select style="width: 80%;" id="selinventSites" rows="10"></select>
+                        <button type="submit" class="btn btn-primary" id="btninventlistdevices">list devices</button> -->
+                    </form>
+                    <hr />
+                    <div class="row" id="allEvents"></div>
+                </div>
+            </div>
+            <!-- clientssummary page page -->
+            <div class="content" id="clientssummary" style="display: none">
+                <h1>Client Summary in DNAC</h1>
+                <div id="carbon-block" style="margin:30px auto">
+                    <form>
+                        <!--- insert datatime picker: 
+                        https://www.jqueryscript.net/time-clock/Clean-jQuery-Date-Time-Picker-Plugin-datetimepicker.html
+                        https://artisansweb.net/how-to-implement-jquery-datepicker-with-timepicker/
+                        https://www.cssscript.com/material-date-time-picker-simplepicker/
+                        -->
+                        <button type="submit" class="btn btn-primary" id="btnClientHealthsummary">Get client health summary</button>
+                        <!-- <select style="width: 80%;" id="selinventSites" rows="10"></select>
+                        <button type="submit" class="btn btn-primary" id="btninventlistdevices">list devices</button> -->
+                    </form>
+                    <hr />
+                    <div class="row" id="allClientssummary"></div>
+                </div>
+            </div>
+            <!-- clients page page -->
+            <div class="content" id="clients" style="display: none">
+                <h1>Clients in DNAC</h1>
+                <div id="carbon-block" style="margin:30px auto">
+                    <form>
+                        <!--- insert datatime picker: 
+                        https://www.jqueryscript.net/time-clock/Clean-jQuery-Date-Time-Picker-Plugin-datetimepicker.html
+                        https://artisansweb.net/how-to-implement-jquery-datepicker-with-timepicker/
+                        https://www.cssscript.com/material-date-time-picker-simplepicker/
+                        -->
+                        <button type="submit" class="btn btn-primary" id="btnClientHealth">Get client health</button>
+                        <!-- <select style="width: 80%;" id="selinventSites" rows="10"></select>
+                        <button type="submit" class="btn btn-primary" id="btninventlistdevices">list devices</button> -->
+                    </form>
+                    <hr />
+                    <div class="row" id="allClients"></div>
+                </div>
+            </div>
+  
+        </div>
+    </div>
+    </div>
+    <!--main container end-->
+    </div>
+    <!--wrapper end-->
+    <script type="text/javascript">
+
+    </script>
+
+</body>
+
+</html>
